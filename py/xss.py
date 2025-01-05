@@ -11,10 +11,10 @@ class ReflectiveXSSHandler(BaseHTTPRequestHandler):
         self.send_header('Content-type', 'text/html')
         self.end_headers()
         self.wfile.write((
-            f"<html><body>"
-            f"<h1>Welcome!</h1>"
+            "<html><body>"
+            "<h1>Welcome!</h1>"
             f"<p>You said: {user_input}</p>"
-            f"</body></html>"
+            "</body></html>"
         ).encode('utf-8'))
 
 def run():
